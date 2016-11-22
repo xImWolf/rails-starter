@@ -1,0 +1,16 @@
+<%= form_for(todo, :html => {:class => 'addTodo'}) do |f| %>
+  <% if todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+      <% todo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_area :content %>
+  <%= f.submit 'Submit', :class => 'button is-dark is-fullwidth' %>
+<% end %>

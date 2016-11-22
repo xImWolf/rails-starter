@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title ToDo List
+    = favicon_link_tag "favicon.png", rel: 'shortcut icon', type: 'image/png'
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %section.hero.is-dark
+      .hero-body
+        .container
+          %h1.title Todo List
+          %h2.subtitle <em>Submit</em> a new Todo to get started!
+    = yield
