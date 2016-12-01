@@ -1,13 +1,13 @@
-.container.todo-list
-  - if @todos.empty?
-    %p There are no todos!
-  - else
+.container
+  .notification
+    .emoji 🚀
+    %div
+      %p.weight-strong This is your demo app.
+      %p.small Each branch gets its own database. Check it out and then head back to Runnable.
+  %h1.h1 Todo List
+  %ul.todo-list
     - @todos.each do |todo|
-      %article.media
-        .media-content
-          .content
-            %p= todo.content
-        .media-right
-          %a= link_to 'Delete', todo, method: :delete, class: 'button is-danger'
-  =render 'form', todo: @todo
-  %p#notice= notice
+      %li.todo-list-item
+        %a= link_to '', todo, method: :delete, class: 'button-complete'
+        %p= todo.content
+    =render 'form', todo: @todo
