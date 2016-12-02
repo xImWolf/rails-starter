@@ -29,7 +29,7 @@ body {
 .h1 {
   font-size: 24px;
   font-weight: 500;
-  margin: 60px 0 12px;
+  margin-top: 60px;
   padding-left: 48px;
 }
 
@@ -38,7 +38,7 @@ body {
   border: 1px solid #e6e6e6;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,.06);
-  margin-bottom: 150px;
+  margin: 15px 0 150px;
 }
 
 .todo-list-item {
@@ -58,9 +58,18 @@ body {
   border: 3px solid #e6e6e6;
   border-radius: 6px;
   cursor: pointer;
+  flex: 0 0 auto;
   height: 18px;
   margin: 4px 12px 0 0;
   width: 18px;
+}
+
+.button-edit {
+  color: #888;
+  font-size: 15px;
+  margin-left: auto;
+  position: relative;
+  top: 4px;
 }
 
 .input {
