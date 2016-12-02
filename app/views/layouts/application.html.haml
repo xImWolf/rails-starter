@@ -1,15 +1,13 @@
 !!!
 %html
   %head
-    %title ToDo List
+    %title Todo List
+    %meta{:charset => "utf-8"}
+    %meta{:"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
     = favicon_link_tag "favicon.png", rel: 'shortcut icon', type: 'image/png'
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %section.hero.is-dark
-      .hero-body
-        .container
-          %h1.title Todo List
-          %h2.subtitle <em>Submit</em> a new Todo to get started!
     = yield

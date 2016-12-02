@@ -4,9 +4,6 @@
     %div
       %p.weight-strong This is your demo app.
       %p.small Each branch gets its own database. Check it out and then head back to Runnable.
-  %h1.h1 Viewing Todo
+  %h1.h1 Editing Todo
   %ul.todo-list
-    %li.todo-list-item
-      %a= link_to '', @todo, method: :delete, class: 'button-complete'
-      %p= @todo.content
-      = link_to 'Edit', edit_todo_path(@todo), class: 'button-edit'
+    =render 'form', todo: @todo
