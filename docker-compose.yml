@@ -4,9 +4,9 @@ services:
     image: postgres
   web:
     build: .
-    volumes:
-      - .:/app
     ports:
       - "3000:3000"
-    depends_on:
-      - db
+    links:
+      - "db"
+    environment:
+      DATABASE_URL: postgres://postgres@db/postgres
