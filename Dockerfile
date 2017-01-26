@@ -1,4 +1,4 @@
-FROM runnable/ruby-starter
+FROM runnable/rails-starter
 
 # Add Repository
 ADD . /app
