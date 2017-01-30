@@ -10,3 +10,4 @@ services:
       - "db"
     environment:
       DATABASE_URL: postgres://postgres@db/postgres
+    command: ["bash", "wait-for-postgres-then-run.sh"]
